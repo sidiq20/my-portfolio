@@ -8,7 +8,7 @@ import {
   SiTailwindcss, SiMongodb, SiFirebase,
   SiTensorflow, SiNumpy, SiPandas,
   SiBootstrap, SiNgrok, SiJinja,
-  SiScikitlearn, SiQt, SiUbuntu
+  SiScikitlearn, SiQt, SiUbuntu, SiSelenium
 } from 'react-icons/si';
 
 function Stack() {
@@ -41,6 +41,7 @@ function Stack() {
       { name: "Docker", icon: FaDocker, color: "text-blue-400" },
       { name: "Ngrok", icon: SiNgrok, color: "text-yellow-400" },
       { name: "Ubuntu", icon: SiUbuntu, color: "text-orange-400" },
+      { name: "Selenium", icon: SiSelenium, color: "text-green-400" },
     ],
     "Gui": [
       { name: "Tkinter", icon: SiQt, color: "text-blue-500" },

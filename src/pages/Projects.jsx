@@ -86,7 +86,7 @@ function Projects() {
     {
       title: "Todo list Gui",
       description: "a Gui based todo list app that allows users to add, delete and mark tasks as completed.",
-      image: crypto,
+      image: "https://placehold.co/600x400",
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
       preview: "",
       github: "https://github.com/sidiq20/todo-gui",
@@ -96,7 +96,7 @@ function Projects() {
     {
       title: "A Internet Speed Test",
       description: "a Gui that scraped fast.com and checks your internet speed and ping it displays the results in a graph.",
-      image: crypto,
+      image: "https://placehold.co/600x400",
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
       preview: "",
       github: "https://github.com/sidiq20/todo-gui",
