@@ -4,6 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { useState } from 'react';
 
 import ecommerceimg from '../assets/images/umami.png';
+import streaker from '../assets/images/streaker.png';
 
 function Projects() {
   const [ref, inView] = useInView({
@@ -23,16 +24,16 @@ function Projects() {
   const projects = [
     {
       title: "AI Death Titanic Death Prediction",
-      description: "A machine learning application that classifies images using TensorFlow and Python. Features a PyQt5 GUI for easy interaction.",
+      description: "A machine learning model that predicts the likelihood of a passenger surviving the Titanic disaster.",
       image: "https://placehold.co/600x400",
       fallbackImage: "https://via.placeholder.com/600x400?text=AI+Image+Classifier",
       preview: "https://placehold.co/600x400",
-      github: "https://github.com/yourusername/ai-classifier",
+      github: "https://github.com/sidiq20/kaggle-titanic-hackaton",
       live: "https://ai-classifier-demo.com",
       tech: ["Python", "SKLearn", "pandas"],
     },
     {
-      title: "E-Commerce Platform",
+      title: "UMAMI CITY ",
       description: "A full-stack e-commerce platform with real-time inventory management, secure payments, and an admin dashboard.",
       image: ecommerceimg,
       fallbackImage: "https://via.placeholder.com/600x400?text=E-Commerce+Platform",
@@ -42,7 +43,7 @@ function Projects() {
       tech: ["React", "Firebase" , "Stripe",]
     },
     {
-      title: "Movie Wactlist",
+      title: "Movie Watchlist",
       description: "A movie watchlist app that allows users to search for movies, add them to a watchlist, and mark them as watched.",
       image: "https://placehold.co/600x400",
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
@@ -52,9 +53,9 @@ function Projects() {
       tech: ["Flask", "Jinja", "Mongodb"],
     },
     {
-      title: "Habit Streaker App",
+      title: "Streaker App",
       description: "A habit tracking application that helps users build and maintain positive habits over time.",
-      image: "https://placehold.co/600x400",
+      image: streaker,
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
       preview: "https://placehold.co/600x400",
       github: "https://github.com/yourusername/task-manager",
