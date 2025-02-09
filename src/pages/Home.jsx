@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+
 function Home() {
   return (
     <motion.section 
@@ -16,7 +17,7 @@ function Home() {
           transition={{ duration: 0.5 }}
           className="text-6xl md:text-8xl font-display mb-6 text-white dark:text-gray-900"
         >
-          Olasode <span className="text-blue-500">Sidiq</span>
+          Olasode <span className="text-blue-500">Sidiq</span> 
         </motion.h1>
         <motion.p 
           initial={{ y: 20, opacity: 0 }}
