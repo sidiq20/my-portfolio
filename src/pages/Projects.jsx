@@ -4,7 +4,7 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { useState } from 'react';
 
 import ecommerceimg from '../assets/images/umami.png';
-import streaker from '../assets/images/streaker.png';
+import streaker from '@assets/images/streaker.png';
 import crypto from '../assets/images/crypto.png';
 
 function Projects() {
