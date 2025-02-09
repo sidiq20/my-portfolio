@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 import ecommerceimg from '../assets/images/umami.png';
 import streaker from '../assets/images/streaker.png';
+import crypto from '../assets/images/crypto.png';
 
 function Projects() {
   const [ref, inView] = useInView({
@@ -48,7 +49,7 @@ function Projects() {
       image: "https://placehold.co/600x400",
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
       preview: "https://placehold.co/600x400",
-      github: "https://github.com/yourusername/task-manager",
+      github: "https://github.com/sidiq20/moviewatchlist",
       live: "https://task-manager-demo.com",
       tech: ["Flask", "Jinja", "Mongodb"],
     },
@@ -58,19 +59,29 @@ function Projects() {
       image: streaker,
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
       preview: "https://placehold.co/600x400",
-      github: "https://github.com/yourusername/task-manager",
+      github: "hhttps://github.com/sidiq20/flask-habit-tracker",
       live: "https://task-manager-demo.com",
       tech: ["Jinja", "Mongodb", "Flask"],
     },
   {
-      title: "Habit Streaker App",
-      description: "A habit tracking application that helps users build and maintain positive habits over time.",
+      title: "A Screen Recorder",
+      description: "A Screen Recorder that records your screen and saves it as a video file.",
       image: "https://placehold.co/600x400",
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
       preview: "https://placehold.co/600x400",
-      github: "https://github.com/yourusername/task-manager",
+      github: "https://github.com/sidiq20/screen-recorder",
       live: "https://task-manager-demo.com",
-      tech: ["Jinja", "Mongodb", "Flask"],
+      tech: ["Tkinter", "Pyaudio", "Python", "cmdGen" ],
+    },
+    {
+      title: " Crypto Hub",
+      description: "A Screen Recorder that records your screen and saves it as a video file.",
+      image: crypto,
+      fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
+      preview: "https://cryptohub-two.vercel.app/",
+      github: "https://github.com/sidiq20/cryptohub",
+      live: "https://task-manager-demo.com",
+      tech: ["Tkinter", "Pyaudio", "Python", "cmdGen" ],
     },
   ];
 
