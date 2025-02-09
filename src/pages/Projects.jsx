@@ -84,14 +84,24 @@ function Projects() {
       tech: ["Firebase", "React", "Tailwind", "CoinGecko API" ],
     },
     {
-      title: "Todo lisy Gui",
+      title: "Todo list Gui",
       description: "a Gui based todo list app that allows users to add, delete and mark tasks as completed.",
       image: crypto,
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
       preview: "",
       github: "https://github.com/sidiq20/todo-gui",
       live: "https://task-manager-demo.com",
-      tech: ["FreeSimpleGUI", "Python" ],
+      tech: ["FreeSimpleGUI", "Python" ]
+    },
+    {
+      title: "A Internet Speed Test",
+      description: "a Gui that scraped fast.com and checks your internet speed and ping it displays the results in a graph.",
+      image: crypto,
+      fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
+      preview: "",
+      github: "https://github.com/sidiq20/todo-gui",
+      live: "https://task-manager-demo.com",
+      tech: ["selenium", "tkinter", "webdriver", "Beutifulsoup", "webdriver" ]
     },
   ];
 
