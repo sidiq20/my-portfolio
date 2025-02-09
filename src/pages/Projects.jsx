@@ -75,13 +75,23 @@ function Projects() {
     },
     {
       title: " Crypto Hub",
-      description: "A Screen Recorder that records your screen and saves it as a video file.",
+      description: "A cryptocurrency dashboard that displays real-time prices, market cap, and trading volume for popular cryptocurrencies.",
       image: crypto,
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
       preview: "https://cryptohub-two.vercel.app/",
       github: "https://github.com/sidiq20/cryptohub",
       live: "https://task-manager-demo.com",
-      tech: ["Tkinter", "Pyaudio", "Python", "cmdGen" ],
+      tech: ["Firebase", "React", "Tailwind", "CoinGecko API" ],
+    },
+    {
+      title: "Todo lisy Gui",
+      description: "a Gui based todo list app that allows users to add, delete and mark tasks as completed.",
+      image: crypto,
+      fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
+      preview: "",
+      github: "https://github.com/sidiq20/todo-gui",
+      live: "https://task-manager-demo.com",
+      tech: ["FreeSimpleGUI", "Python" ],
     },
   ];
 
