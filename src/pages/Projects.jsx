@@ -22,14 +22,14 @@ function Projects() {
 
   const projects = [
     {
-      title: "AI Image Classifier",
+      title: "AI Death Titanic Death Prediction",
       description: "A machine learning application that classifies images using TensorFlow and Python. Features a PyQt5 GUI for easy interaction.",
       image: "https://placehold.co/600x400",
       fallbackImage: "https://via.placeholder.com/600x400?text=AI+Image+Classifier",
       preview: "https://placehold.co/600x400",
       github: "https://github.com/yourusername/ai-classifier",
       live: "https://ai-classifier-demo.com",
-      tech: ["Python", "TensorFlow", "PyQt5", "NumPy"],
+      tech: ["Python", "SKLearn", "pandas"],
     },
     {
       title: "E-Commerce Platform",
@@ -42,24 +42,34 @@ function Projects() {
       tech: ["React", "Firebase" , "Stripe",]
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team features, and progress tracking.",
+      title: "Movie Wactlist",
+      description: "A movie watchlist app that allows users to search for movies, add them to a watchlist, and mark them as watched.",
       image: "https://placehold.co/600x400",
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
       preview: "https://placehold.co/600x400",
       github: "https://github.com/yourusername/task-manager",
       live: "https://task-manager-demo.com",
-      tech: ["React", "Firebase", "Tailwind CSS", "Redux"],
+      tech: ["Flask", "Jinja", "Mongodb"],
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team features, and progress tracking.",
+      title: "Habit Streaker App",
+      description: "A habit tracking application that helps users build and maintain positive habits over time.",
       image: "https://placehold.co/600x400",
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
       preview: "https://placehold.co/600x400",
       github: "https://github.com/yourusername/task-manager",
       live: "https://task-manager-demo.com",
-      tech: ["React", "Firebase", "Tailwind CSS", "Redux"],
+      tech: ["Jinja", "Mongodb", "Flask"],
+    },
+  {
+      title: "Habit Streaker App",
+      description: "A habit tracking application that helps users build and maintain positive habits over time.",
+      image: "https://placehold.co/600x400",
+      fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
+      preview: "https://placehold.co/600x400",
+      github: "https://github.com/yourusername/task-manager",
+      live: "https://task-manager-demo.com",
+      tech: ["Jinja", "Mongodb", "Flask"],
     },
   ];
 
