@@ -32,9 +32,9 @@ function ThemeToggle() {
       aria-label="Toggle theme"
     >
       {isDark ? (
-        <FaSun className="text-yellow-500 text-xl" />
+        <FaMoon className="text-black-500 text-xl" />
       ) : (
-        <FaMoon className="text-blue-600 text-xl" />
+        <FaSun className="text-black-600 text-xl" />
       )}
     </motion.button>
   );
