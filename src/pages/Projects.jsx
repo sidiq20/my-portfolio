@@ -6,6 +6,7 @@ import { useState } from 'react';
 import ecommerceimg from '../assets/images/umami.png';
 import streaker from '@assets/images/streaker.png';
 import crypto from '../assets/images/crypto.png';
+import typo from '../assets/images/typophoria.png'
 
 function Projects() {
   const [ref, inView] = useInView({
@@ -102,6 +103,16 @@ function Projects() {
       github: "https://github.com/sidiq20/todo-gui",
       live: "https://task-manager-demo.com",
       tech: ["selenium", "tkinter", "webdriver", "Beutifulsoup", "webdriver" ]
+    },
+    {
+      title: "TypophoriaX",
+      description: "A Love letter application that makes user customize their letters to their loved ones. it also has inbuilt ai",
+      image: typo,
+      fallbackImage: typo,
+      preview: "https://typophoriax.vercel.app/",
+      github: "https://github.com/sidiq20/nova-app",
+      live: "https://typophoriax.vercel.app/",
+      tech: ["javascript", "tailwindcss", "framer", "firebase" ]
     },
   ];
 
