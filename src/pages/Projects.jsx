@@ -61,7 +61,7 @@ function Projects() {
       fallbackImage: "https://via.placeholder.com/600x400?text=Task+Manager",
       preview: "https://placehold.co/600x400",
       github: "hhttps://github.com/sidiq20/flask-habit-tracker",
-      live: "https://task-manager-demo.com",
+      live: "https://streaker-chat.onrender.com/",
       tech: ["Jinja", "Mongodb", "Flask"],
     },
   {
