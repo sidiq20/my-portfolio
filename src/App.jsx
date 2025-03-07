@@ -25,10 +25,10 @@ function AppContent() {
       <Navbar />
       <ThemeToggle />
       <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname}>
+        <Routes location={location} key={location.pathname.split('/').slice(0, 2).join('/')}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/*" element={<Projects />} />
           <Route path="/stack" element={<Stack />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
