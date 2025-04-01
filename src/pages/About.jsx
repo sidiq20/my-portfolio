@@ -42,7 +42,7 @@ function About() {
             className="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl"
           >
             <img
-              src="https://placehold.co/200x200/png"
+              src="http://x.com/sidiqolasode/photo"
               alt="Olasode Sidiq"
               className="w-full h-full object-cover"
             />
