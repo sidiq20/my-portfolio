@@ -1,12 +1,11 @@
-import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { Code, Rocket, Star, ChevronDown, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 
-function Home() {
+function Hero() {
   const { scrollY } = useScroll();
   const [hoveredFeature, setHoveredFeature] = useState(null);
-  
+
   const y = useSpring(useTransform(scrollY, [0, 300], [0, -50]), {
     stiffness: 100,
     damping: 30
@@ -20,19 +19,22 @@ function Home() {
       icon: <Code className="w-8 h-8" />,
       title: "Full Stack Development",
       description: "Building end-to-end web applications with modern technologies",
-      skills: ["React", "python", "JavaScript", "MongoDB", "flask"]
+      skills: ["React", "Python", "JavaScript", "MongoDB", "Flask"],
+      animationType: "slideInLeft"
     },
     {
       icon: <Rocket className="w-8 h-8" />,
       title: "AI/ML Development",
       description: "Creating intelligent solutions with machine learning",
-      skills: ["TensorFlow", "PyTorch", "Computer Vision", "NLP"]
+      skills: ["TensorFlow", "PyTorch", "Computer Vision", "NLP"],
+      animationType: "slideInUp"
     },
     {
       icon: <Star className="w-8 h-8" />,
       title: "Clean Architecture",
       description: "Designing scalable and maintainable systems",
-      skills: ["SOLID", "Design Patterns", "Testing", "CI/CD"]
+      skills: ["SOLID", "Design Patterns", "Testing", "CI/CD"],
+      animationType: "slideInRight"
     }
   ];
 
@@ -54,9 +56,16 @@ function Home() {
   const firstName = "Olasode".split("");
   const lastName = "SIDIQ".split("");
 
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
   return (
-    <div className="min-h-screen overflow-x-hidden">
-      <motion.section 
+    <section id="home" className="min-h-screen overflow-x-hidden">
+      <motion.div
         style={{ y, opacity, scale }}
         className="h-screen flex items-center justify-center px-6 bg-gradient-to-b from-primary to-secondary dark:from-gray-100 dark:to-white relative"
       >
@@ -67,15 +76,15 @@ function Home() {
               <motion.div
                 key={i}
                 className="absolute w-1 h-1 bg-blue-500/20 rounded-full"
-                initial={{ 
-                  x: Math.random() * window.innerWidth,
-                  y: Math.random() * window.innerHeight,
+                initial={{
+                  x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1200),
+                  y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
                   scale: Math.random() * 0.5 + 0.5
                 }}
                 animate={{
                   y: [
-                    Math.random() * window.innerHeight,
-                    Math.random() * window.innerHeight
+                    Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800),
+                    Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 800)
                   ],
                   scale: [1, Math.random() * 1.5 + 0.5, 1]
                 }}
@@ -91,7 +100,7 @@ function Home() {
 
         <div className="text-center max-w-4xl relative z-10">
           {/* Animated Name */}
-          <motion.h1 
+          <motion.h1
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -126,14 +135,14 @@ function Home() {
               ))}
             </div>
           </motion.h1>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             className="relative"
           >
-            <motion.p 
+            <motion.p
               className="text-xl md:text-2xl text-gray-300 dark:text-gray-600 mb-8"
               whileHover={{ scale: 1.05 }}
             >
@@ -141,14 +150,14 @@ function Home() {
             </motion.p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
             className="flex gap-4 justify-center"
           >
-            <Link 
-              to="/projects"
+            <button
+              onClick={() => scrollToSection('projects')}
               className="group relative bg-blue-500 text-white px-8 py-3 rounded-full text-sm overflow-hidden"
             >
               <motion.span
@@ -164,9 +173,9 @@ function Home() {
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}
               />
-            </Link>
-            <Link 
-              to="/contact"
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
               className="group relative bg-transparent border-2 border-white dark:border-gray-900 text-white dark:text-gray-900 px-8 py-3 rounded-full text-sm overflow-hidden"
             >
               <motion.span
@@ -182,7 +191,7 @@ function Home() {
                 whileHover={{ x: 0 }}
                 transition={{ duration: 0.3 }}
               />
-            </Link>
+            </button>
           </motion.div>
         </div>
 
@@ -192,66 +201,88 @@ function Home() {
           transition={{ duration: 1, delay: 1 }}
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
         >
-          <motion.div
+          <motion.button
+            onClick={() => scrollToSection('about')}
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="flex flex-col items-center text-white dark:text-gray-900 text-sm"
+            className="flex flex-col items-center text-white dark:text-gray-900 text-sm hover:text-blue-400 dark:hover:text-blue-600 transition-colors"
           >
             <span>Scroll to explore</span>
             <ChevronDown className="w-6 h-6 mt-2" />
-          </motion.div>
+          </motion.button>
         </motion.div>
-      </motion.section>
+      </motion.div>
 
-      <section className="py-20 px-6 relative">
+      <div className="py-20 px-6 relative">
         <div className="max-w-6xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="relative p-6 rounded-lg bg-white/5 dark:bg-gray-900/5 backdrop-blur-sm border border-white/10 dark:border-gray-900/10 overflow-hidden group"
-                onHoverStart={() => setHoveredFeature(index)}
-                onHoverEnd={() => setHoveredFeature(null)}
-              >
-                <motion.div
-                  className="absolute inset-0 bg-blue-500/5"
-                  initial={{ scale: 0 }}
-                  whileHover={{ scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-                
-                <motion.div
-                  whileHover={{ scale: 1.1 }}
-                  className="text-blue-500 mb-4 relative"
-                >
-                  {feature.icon}
-                </motion.div>
-                
-                <motion.h3 
-                  className="text-xl font-bold text-white dark:text-gray-900 mb-2 relative"
-                  whileHover={{ x: 10 }}
-                >
-                  {feature.title}
-                </motion.h3>
-                
-                <motion.p 
-                  className="text-gray-400 dark:text-gray-600 relative"
-                  whileHover={{ x: 10 }}
-                >
-                  {feature.description}
-                </motion.p>
+            {features.map((feature, index) => {
+              const getAnimationVariants = (type) => {
+                switch (type) {
+                  case "slideInLeft":
+                    return { initial: { opacity: 0, x: -100, rotateY: -15 }, animate: { opacity: 1, x: 0, rotateY: 0 } };
+                  case "slideInRight":
+                    return { initial: { opacity: 0, x: 100, rotateY: 15 }, animate: { opacity: 1, x: 0, rotateY: 0 } };
+                  case "slideInUp":
+                    return { initial: { opacity: 0, y: 100, scale: 0.8 }, animate: { opacity: 1, y: 0, scale: 1 } };
+                  default:
+                    return { initial: { opacity: 0, y: 50 }, animate: { opacity: 1, y: 0 } };
+                }
+              };
 
-                <AnimatePresence>
+              const variants = getAnimationVariants(feature.animationType);
+
+              return (
+                <motion.div
+                  key={feature.title}
+                  initial={variants.initial}
+                  whileInView={variants.animate}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{
+                    duration: 0.8,
+                    delay: index * 0.2,
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 15
+                  }}
+                  className="relative p-6 rounded-lg bg-white/5 dark:bg-gray-900/5 backdrop-blur-sm border border-white/10 dark:border-gray-900/10 overflow-hidden group"
+                  onHoverStart={() => setHoveredFeature(index)}
+                  onHoverEnd={() => setHoveredFeature(null)}
+                >
+                  <motion.div
+                    className="absolute inset-0 bg-blue-500/5"
+                    initial={{ scale: 0 }}
+                    whileHover={{ scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    className="text-blue-500 mb-4 relative"
+                  >
+                    {feature.icon}
+                  </motion.div>
+
+                  <motion.h3
+                    className="text-xl font-bold text-white dark:text-gray-900 mb-2 relative"
+                    whileHover={{ x: 10 }}
+                  >
+                    {feature.title}
+                  </motion.h3>
+
+                  <motion.p
+                    className="text-gray-400 dark:text-gray-600 relative"
+                    whileHover={{ x: 10 }}
+                  >
+                    {feature.description}
+                  </motion.p>
+
                   {hoveredFeature === index && (
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
@@ -274,14 +305,14 @@ function Home() {
                       </div>
                     </motion.div>
                   )}
-                </AnimatePresence>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 
-export default Home;
+export default Hero;

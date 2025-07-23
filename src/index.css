@@ -6,8 +6,29 @@
   color-scheme: dark light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-primary text-white dark:bg-gray-100 dark:text-gray-900 m-0 p-0 min-h-screen font-sans antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary dark:bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-600;
 }
 
 .gradient-text {
@@ -31,14 +52,9 @@ body {
 }
 
 .button-primary {
-  @apply bg-blue-500 text-white px-8 py-3 rounded-full font-mono text-sm 
-         hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 
-         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
+  @apply bg-blue-500 text-white px-8 py-3 rounded-full font-mono text-sm hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
 }
 
 .button-secondary {
-  @apply bg-transparent border-2 border-white dark:border-gray-900 text-white dark:text-gray-900 
-         px-8 py-3 rounded-full font-mono text-sm hover:bg-white/10 dark:hover:bg-gray-900/10 
-         transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 
-         focus:ring-white dark:focus:ring-gray-900 focus:ring-opacity-50;
+  @apply bg-transparent border-2 border-white dark:border-gray-900 text-white dark:text-gray-900 px-8 py-3 rounded-full font-mono text-sm hover:bg-white/10 dark:hover:bg-gray-900/10 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white dark:focus:ring-gray-900 focus:ring-opacity-50;
 }

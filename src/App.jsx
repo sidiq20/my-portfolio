@@ -1,38 +1,44 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import Navbar from './components/Navbar';
 import ThemeToggle from './components/ThemeToggle';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Stack from './pages/Stack';
-import Contact from './pages/Contact';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Stack from './components/Stack';
+import Contact from './components/Contact';
 
 function App() {
-  return (
-    <Router>
-      <AppContent />
-    </Router>
-  );
-}
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
-function AppContent() {
-  const location = useLocation();
-  
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary to-secondary dark:from-gray-100 dark:to-white">
+      {/* Progress Bar */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-blue-500 origin-left z-50"
+        style={{ scaleX }}
+      />
+      
       <Navbar />
       <ThemeToggle />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname.split('/').slice(0, 2).join('/')}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects/*" element={<Projects />} />
-          <Route path="/stack" element={<Stack />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </AnimatePresence>
+      
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Hero />
+        <About />
+        <Projects />
+        <Stack />
+        <Contact />
+      </motion.main>
+      
       <Footer />
     </div>
   );
