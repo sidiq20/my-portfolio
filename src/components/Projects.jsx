@@ -75,6 +75,23 @@ function Projects() {
       ],
       animationType: "slideInRight"
     },
+        {
+      id: "tech-gadget-ecommerce",
+      title: "tech-gadget-ecommerce",
+      description: "A prototype for an e-commerce website that sells tech gadgets.",
+      longDescription: "A prototype for an e-commerce website that showcases various tech gadgets with a modern and responsive design.",
+      image: "/tech.png",
+      fallbackImage: "https://via.placeholder.com/600x400?text=AI+ML",
+      github: "https://github.com/sidiq20/prototype-for-e-commerce",
+      tech: ["Typescript", "React", "Tailwind CSS", "Framer Motion"],
+      features: [
+        "Responsive design",
+        "Product showcase",
+        "Smooth animations",
+        "User-friendly interface"
+      ],
+      animationType: "flipIn"
+    },
     {
       id: "typophoriax",
       title: "TypophoriaX",
@@ -199,7 +216,8 @@ function Projects() {
         "Interactive prediction interface"
       ],
       animationType: "flipIn"
-    }
+    },
+    
   ];
 
   return (
