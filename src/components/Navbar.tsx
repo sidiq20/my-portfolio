@@ -56,16 +56,31 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
+          <button
+            onClick={() => document.documentElement.classList.toggle("theme-light")}
+            className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-white hover:opacity-40 transition-opacity duration-300"
+            data-cursor="magnetic"
+          >
+            [ Invert ]
+          </button>
         </div>
 
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-white z-50"
-          data-cursor="expand"
-        >
-          {isOpen ? "Close" : "Menu"}
-        </button>
+        {/* Mobile toggle & theme */}
+        <div className="md:hidden flex items-center gap-6 z-50">
+          <button
+            onClick={() => document.documentElement.classList.toggle("theme-light")}
+            className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-white hover:opacity-40 transition-opacity"
+          >
+            [ Invert ]
+          </button>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-white"
+            data-cursor="expand"
+          >
+            {isOpen ? "Close" : "Menu"}
+          </button>
+        </div>
       </motion.nav>
 
       {/* Mobile overlay */}

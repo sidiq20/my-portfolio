@@ -12,6 +12,18 @@
   --fg-muted: #666666;
   --fg-dim: #333333;
   --border-color: #1a1a1a;
+  --selection-bg: #ffffff;
+  --selection-fg: #000000;
+}
+
+.theme-light {
+  --bg: #ffffff;
+  --fg: #000000;
+  --fg-muted: #999999;
+  --fg-dim: #cccccc;
+  --border-color: #e6e6e6;
+  --selection-bg: #000000;
+  --selection-fg: #ffffff;
 }
 
 /* ── Reset & Base ─────────────────────────── */

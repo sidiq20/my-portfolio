@@ -93,6 +93,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { Preloader } from "@/components/Preloader";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -101,6 +103,24 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${spaceMono.variable}`}>
       <body>
+        <Preloader />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Sidiq Olasode",
+              url: "https://sidiqolasode.vercel.app",
+              jobTitle: "Full Stack Developer",
+              sameAs: [
+                "https://github.com/sidiq20",
+                "https://x.com/tobiscrazy",
+                "https://www.linkedin.com/in/olasode-sidiq-290a382a6/"
+              ],
+            }),
+          }}
+        />
         <CustomCursor />
         <Navbar />
         <main>{children}</main>
