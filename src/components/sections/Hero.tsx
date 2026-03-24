@@ -8,8 +8,8 @@ const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.04,
-      delayChildren: 0.3,
+      staggerChildren: 0.06, // Slightly slower stagger for the first name
+      delayChildren: 3.2, // Wait for preloader to slide up
     },
   },
 };
@@ -18,8 +18,8 @@ const secondLineVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.04,
-      delayChildren: 0.65,
+      staggerChildren: 0.06,
+      delayChildren: 3.7, // Last name comes slightly after first name
     },
   },
 };
@@ -29,7 +29,7 @@ const letterVariants: Variants = {
   visible: {
     y: "0%",
     transition: {
-      duration: 0.7,
+      duration: 1.0, // Slow, elegant slide
       ease: [0.22, 1, 0.36, 1],
     },
   },
@@ -85,7 +85,7 @@ export function Hero() {
           className="hero-role"
           initial={{ opacity: 0 }}
           animate={{ opacity: ready ? 1 : 0 }}
-          transition={{ delay: 1.1, duration: 0.8 }}
+          transition={{ delay: 5.2, duration: 1.2 }} // Appears after Navbar
         >
           — {personal.role}
         </motion.p>
@@ -97,7 +97,7 @@ export function Hero() {
         style={{ transform: "translateX(-50%)" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: ready ? 0.35 : 0 }}
-        transition={{ delay: 1.5, duration: 0.8 }}
+        transition={{ delay: 5.8, duration: 1.2 }} // Last element to appear
       >
         <span className="font-mono text-[9px] uppercase tracking-[0.4em]">
           Scroll

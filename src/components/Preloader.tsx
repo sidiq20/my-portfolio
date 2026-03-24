@@ -12,18 +12,18 @@ export function Preloader() {
     
     let current = 0;
     const interval = setInterval(() => {
-      current += Math.floor(Math.random() * 8) + 1;
+      current += Math.floor(Math.random() * 3) + 1; // Slower tick rate (1-3%)
       if (current >= 100) {
         setProgress(100);
         clearInterval(interval);
         setTimeout(() => {
           setLoading(false);
           document.body.style.overflow = "";
-        }, 500);
+        }, 800); // Linger on 100% for 800ms for dramatic effect
       } else {
         setProgress(current);
       }
-    }, 30);
+    }, 40); // Slower interval completely
 
     return () => {
       clearInterval(interval);

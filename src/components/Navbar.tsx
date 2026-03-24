@@ -15,7 +15,8 @@ export function Navbar() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 1300);
+    // Reveal Navbar exactly after the Hero name finishes its slow reveal (around 4600ms)
+    const timer = setTimeout(() => setShow(true), 4600);
     return () => clearTimeout(timer);
   }, []);
 

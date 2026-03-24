@@ -36,11 +36,8 @@ export function Projects() {
 
         <div>
           {projects.map((project, i) => (
-            <motion.a
+            <motion.div
               key={project.title}
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
               className="project-card block sticky bg-black"
               style={{ top: `calc(15vh + ${i * 30}px)`, zIndex: i + 1 }}
               data-cursor="expand"
@@ -94,7 +91,7 @@ export function Projects() {
                   </svg>
                 </div>
               </div>
-            </motion.a>
+            </motion.div>
           ))}
         </div>
 
