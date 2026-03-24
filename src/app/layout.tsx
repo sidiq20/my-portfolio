@@ -69,7 +69,7 @@ export const metadata: Metadata = {
       "Building digital products at the intersection of code and craft. Specializing in React, Next.js, AI/ML, and Web3.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/api/og",
         width: 1200,
         height: 630,
         alt: "Sidiq Olasode Portfolio",
@@ -78,9 +78,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sidiq Olasode — Full Stack Developer",
+    title: "Sidiq Olasode — Full Stack Developer & AI Enthusiast & Web3 Developer",
     description:
       "Building digital products at the intersection of code and craft.",
+    images: ["/api/og"],
     creator: "@sidiq20",
   },
   icons: {

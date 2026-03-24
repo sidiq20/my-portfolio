@@ -24,7 +24,8 @@ export function Projects() {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="project-card block"
+              className="project-card block sticky bg-black"
+              style={{ top: `calc(15vh + ${i * 30}px)`, zIndex: i + 1 }}
               data-cursor="expand"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
