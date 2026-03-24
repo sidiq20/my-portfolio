@@ -2,7 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import { useEffect, useState } from "react";
-import { personal } from "@/data/portfolio";
+import { personal, stack } from "@/data/portfolio";
 
 const containerVariants: Variants = {
   hidden: {},
@@ -93,7 +93,7 @@ export function Hero() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-12 left-1/2 flex flex-col items-center gap-4"
+        className="absolute bottom-24 left-1/2 flex flex-col items-center gap-4"
         style={{ transform: "translateX(-50%)" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: ready ? 0.35 : 0 }}
@@ -103,6 +103,23 @@ export function Hero() {
           Scroll
         </span>
         <div className="w-[1px] h-8 bg-white/30" />
+      </motion.div>
+
+      {/* Endless Tech Stack Marquee */}
+      <motion.div
+        className="absolute bottom-0 left-0 w-full overflow-hidden border-t border-white/5 py-3 bg-[#0a0a0a]"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: ready ? 1 : 0, y: 0 }}
+        transition={{ delay: 6.2, duration: 1.2 }}
+      >
+        <div className="marquee-track">
+          {[...stack, ...stack, ...stack, ...stack].map((item, i) => (
+            <div key={i} className="flex items-center flex-shrink-0">
+              <span className="marquee-item">[ {item} ]</span>
+              <span className="marquee-separator">—</span>
+            </div>
+          ))}
+        </div>
       </motion.div>
     </section>
   );
