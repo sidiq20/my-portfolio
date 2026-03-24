@@ -14,9 +14,7 @@ export async function GET() {
           alignItems: 'center',
           justifyContent: 'center',
           backgroundColor: '#000000',
-          color: '#ffffff',
-          fontFamily: 'sans-serif',
-          border: '10px solid #222222',
+          position: 'relative',
         }}
       >
         <div
@@ -25,35 +23,57 @@ export async function GET() {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '40px',
-            border: '2px solid #333333',
           }}
         >
+          {/* First name line */}
           <h1
             style={{
-              fontSize: '80px',
+              fontSize: '220px',
               fontFamily: 'serif',
-              fontWeight: 'bold',
-              letterSpacing: '-0.02em',
+              fontWeight: 300,
+              letterSpacing: '-0.03em',
+              lineHeight: 0.85,
+              color: '#ffffff',
               margin: 0,
               padding: 0,
               textTransform: 'uppercase',
               textAlign: 'center',
             }}
           >
-            Sidiq Olasode
+            SIDIQ
           </h1>
-          <p
+
+          {/* Last name line (muted) */}
+          <h1
             style={{
-              fontSize: '36px',
-              color: '#a1a1aa',
-              marginTop: '20px',
-              letterSpacing: '0.05em',
+              fontSize: '220px',
+              fontFamily: 'serif',
+              fontWeight: 300,
+              letterSpacing: '-0.03em',
+              lineHeight: 0.85,
+              color: 'rgba(255, 255, 255, 0.25)',
+              margin: 0,
+              padding: 0,
               textTransform: 'uppercase',
               textAlign: 'center',
             }}
           >
-            Full Stack Developer & AI Enthusiast & Web3 Developer
+            OLASODE
+          </h1>
+
+          {/* Role */}
+          <p
+            style={{
+              fontSize: '24px',
+              fontFamily: 'monospace',
+              color: '#666666',
+              letterSpacing: '0.3em',
+              textTransform: 'uppercase',
+              textAlign: 'center',
+              margin: '80px 0 0 0',
+            }}
+          >
+            — FULL STACK DEVELOPER, AI ENTHUSIAST & WEB3 DEVELOPER
           </p>
         </div>
       </div>
