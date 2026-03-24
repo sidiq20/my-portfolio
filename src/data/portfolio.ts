@@ -1,12 +1,12 @@
 export const personal = {
-  firstName: "OLASODE",
-  lastName: "SIDIQ",
+  firstName: "SIDIQ",
+  lastName: "OLASODE",
   role: "Full Stack Developer & AI Enthusiast",
   email: "sidiqolasode@gmail.com",
   github: "https://github.com/sidiq20",
   githubHandle: "sidiq20",
-  twitter: "#",
-  linkedin: "#",
+  twitter: "https://x.com/tobiscrazy",
+  linkedin: "https://www.linkedin.com/in/olasode-sidiq-290a382a6/",
 };
 
 export const projects = [
