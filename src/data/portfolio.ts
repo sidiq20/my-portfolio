@@ -28,11 +28,11 @@ export const projects = [
   },
   {
     title: "SevenEdge",
-    category: "Enterprise Architecture",
+    category: "Organisation Website",
     year: "2026",
     description:
-      "A scalable, high-performance TypeScript application framework designed for enterprise-grade stability and modularity.",
-    tech: ["TypeScript", "Next.js", "Clean Architecture"],
+      "A scalable website for an organisation with a clean and modern interface",
+    tech: ["TypeScript", "Next.js", "Clean Architecture", "FastAPI", "PostgreSQL"],
     github: "",
   },
   {
