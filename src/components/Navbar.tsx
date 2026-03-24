@@ -41,7 +41,7 @@ export function Navbar() {
           className="font-display text-2xl font-light tracking-tight text-white"
           data-cursor="expand"
         >
-          S.
+          S.O.
         </a>
 
         {/* Desktop */}
