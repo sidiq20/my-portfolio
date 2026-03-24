@@ -30,7 +30,7 @@ export function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <span className="stat-number">05</span>
+              <span className="stat-number">07</span>
               <span className="stat-label">Selected Projects</span>
             </motion.div>
           </div>

@@ -11,13 +11,29 @@ export const personal = {
 
 export const projects = [
   {
+    title: "Tungsten",
+    category: "E-learning platform",
+    year: "2026",
+    description: "A comprehensive e-learning platform designed to provide seamless and interactive learning experiences for students and educators.",
+    tech: ["TypeScript", "NestJS", "FastAPI", "Next.js", "Tailwind CSS", "PostgreSQL", "Redis", "GraphQL"],
+    github: "#",
+  },
+  {
+    title: "Trofida",
+    category: "Proof of Discipline",
+    year: "2026",
+    description: "A solana / Axum based app for tracking your daily habits and goals",
+    tech: ["TypeScript", "Solana / Rust", "Axum", "Next.js", "Tailwind CSS", "PostgreSQL", "GraphQL"],
+    github: "#",
+  },
+  {
     title: "SevenEdge",
     category: "Enterprise Architecture",
-    year: "2024",
+    year: "2026",
     description:
       "A scalable, high-performance TypeScript application framework designed for enterprise-grade stability and modularity.",
     tech: ["TypeScript", "Next.js", "Clean Architecture"],
-    github: "https://github.com/sidiq20/sevenedge",
+    github: "",
   },
   {
     title: "Stay Eko",
@@ -25,8 +41,8 @@ export const projects = [
     year: "2024",
     description:
       "A comprehensive property management ecosystem consisting of mobile applications, a robust backend, and a modern web frontend.",
-    tech: ["TypeScript", "Node.js", "React Native", "PostgreSQL"],
-    github: "https://github.com/sidiq20/stay-eko",
+    tech: ["TypeScript", " FastAPI", "React Native", "MongoDB", "Redis"],
+    github: "#",
   },
   {
     title: "Zikr on Sol",
@@ -35,16 +51,16 @@ export const projects = [
     description:
       "High-frequency decentralized application built on the Solana blockchain, featuring optimized smart contract interactions.",
     tech: ["TypeScript", "Solana / Rust", "Anchor"],
-    github: "https://github.com/sidiq20/zikr_on_sol",
+    github: "#",
   },
   {
     title: "Whisper Exam",
-    category: "AI & Security",
-    year: "2024",
+    category: "Education Technology",
+    year: "2025",
     description:
-      "Advanced AI-powered examination platform featuring automated proctoring and secure, encrypted data handling.",
-    tech: ["Python", "FastAPI", "TypeScript", "TensorFlow"],
-    github: "https://github.com/sidiq20/whisper-exam-backend",
+      "An AI-powered examination platform featuring automated proctoring and secure, encrypted data handling.",
+    tech: ["Python", "Flask", "TypeScript", "TensorFlow", "Next.js"],
+    github: "#",
   },
   {
     title: "LASUTH EMR",
@@ -53,7 +69,7 @@ export const projects = [
     description:
       "A secure, encrypted dashboard for managing patient information and streamlining clinical workflows in hospital environments.",
     tech: ["Next.js", "Firebase", "Encryption"],
-    github: "https://github.com/sidiq20/hospital-dashboard",
+    github: "#",
   },
 ];
 
@@ -62,7 +78,8 @@ export const stack = [
   "TypeScript",
   "Python",
   "FastAPI / Flask",
-  "Solana / Rust",
+  "Rust / Solana",
+  "Rust / Axum",
   "TensorFlow",
   "Docker",
   "PostgreSQL",
