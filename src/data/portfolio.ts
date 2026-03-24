@@ -37,7 +37,7 @@ export const projects = [
   },
   {
     title: "Stay Eko",
-    category: "Full Stack Platform",
+    category: "House Hosting Platform",
     year: "2024",
     description:
       "A comprehensive property management ecosystem consisting of mobile applications, a robust backend, and a modern web frontend.",
