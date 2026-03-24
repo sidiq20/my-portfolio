@@ -67,21 +67,12 @@ export const metadata: Metadata = {
     title: "Sidiq Olasode — Full Stack Developer & AI Enthusiast",
     description:
       "Building digital products at the intersection of code and craft. Specializing in React, Next.js, AI/ML, and Web3.",
-    images: [
-      {
-        url: "/api/og",
-        width: 1200,
-        height: 630,
-        alt: "Sidiq Olasode Portfolio",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Sidiq Olasode — Full Stack Developer & AI Enthusiast & Web3 Developer",
     description:
       "Building digital products at the intersection of code and craft.",
-    images: ["/api/og"],
     creator: "@sidiq20",
   },
   icons: {
