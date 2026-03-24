@@ -61,7 +61,7 @@ export const stack = [
   "React / Next.js",
   "TypeScript",
   "Python",
-  "FastAPI",
+  "FastAPI / Flask",
   "Solana / Rust",
   "TensorFlow",
   "Docker",
@@ -69,9 +69,10 @@ export const stack = [
   "MongoDB",
   "Firebase",
   "GraphQL",
-  "Node.js",
   "Git",
-  "Linux",
+  "Ubuntu",
+  "Selenium",
+  "Postman"
 ];
 
 export const about = {
