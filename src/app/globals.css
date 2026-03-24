@@ -1,0 +1,325 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════
+   PORTFOLIO — TYPOGRAPHIC BRUTALISM
+   Cormorant Garamond × Space Mono
+   Black. White. Nothing else.
+   ═══════════════════════════════════════════════ */
+
+:root {
+  --bg: #000000;
+  --fg: #ffffff;
+  --fg-muted: #666666;
+  --fg-dim: #333333;
+  --border-color: #1a1a1a;
+}
+
+/* ── Reset & Base ─────────────────────────── */
+
+*, *::before, *::after {
+  cursor: none !important;
+  border-radius: 0 !important;
+}
+
+@media (pointer: coarse) {
+  *, *::before, *::after {
+    cursor: auto !important;
+  }
+}
+
+::selection {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-space-mono), monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ── Grain Texture Overlay ────────────────── */
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10000;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Custom Cursor ────────────────────────── */
+
+.custom-cursor {
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 50% !important;
+  transition: width 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              height 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              margin-left 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+              margin-top 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-left: -5px;
+  margin-top: -5px;
+  will-change: transform;
+}
+
+.custom-cursor.expanded {
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+@media (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
+/* ── Typography System ────────────────────── */
+
+.font-display {
+  font-family: var(--font-cormorant), serif;
+}
+
+.font-mono {
+  font-family: var(--font-space-mono), monospace;
+}
+
+.hero-name {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(4rem, 12vw, 15rem);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+}
+
+.hero-name--muted {
+  opacity: 0.25;
+}
+
+.hero-role {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--fg-muted);
+  margin-top: 2.5rem;
+}
+
+.section-label {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--fg-muted);
+}
+
+.heading-display {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(2rem, 4.5vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: var(--fg);
+}
+
+.body-mono {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--fg-muted);
+}
+
+.stat-number {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(5rem, 10vw, 9rem);
+  font-weight: 300;
+  line-height: 0.9;
+  display: block;
+  opacity: 0.12;
+}
+
+.stat-label {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--fg-muted);
+  display: block;
+  margin-top: 0.75rem;
+}
+
+/* ── Project Cards ────────────────────────── */
+
+.project-card {
+  display: block;
+  padding: 3rem 2rem;
+  margin: 0 -2rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+              color 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.project-card:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.project-card:hover .project-number {
+  opacity: 1;
+  color: #000000;
+}
+
+.project-card:hover .project-category {
+  color: #333333;
+}
+
+.project-card:hover .project-description {
+  color: #444444;
+}
+
+.project-card:hover .project-tech span {
+  background: #000000;
+  color: #ffffff;
+}
+
+.project-number {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 300;
+  opacity: 0.15;
+  line-height: 1;
+  transition: opacity 0.5s, color 0.5s;
+}
+
+.project-title {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.project-category {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--fg-muted);
+  transition: color 0.5s;
+}
+
+.project-description {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--fg-dim);
+  max-width: 500px;
+  transition: color 0.5s;
+}
+
+.project-tech span {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+}
+
+.project-card:hover .project-tech span {
+  border-color: #000000;
+}
+
+/* ── Marquee ──────────────────────────────── */
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 35s linear infinite;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-reverse {
+  animation: marquee-reverse 30s linear infinite;
+}
+
+.marquee-item {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--fg-muted);
+  padding: 0 2rem;
+  flex-shrink: 0;
+}
+
+.marquee-separator {
+  color: var(--fg-dim);
+  padding: 0 0.5rem;
+  flex-shrink: 0;
+}
+
+/* ── Contact ──────────────────────────────── */
+
+.contact-email {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  font-weight: 300;
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.25rem;
+  transition: border-color 0.4s;
+}
+
+.contact-email:hover {
+  border-color: var(--fg);
+}
+
+.contact-social {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--fg-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-social:hover {
+  color: var(--fg);
+}
+
+/* ── Focus States ─────────────────────────── */
+
+*:focus-visible {
+  outline: 1px solid #ffffff;
+  outline-offset: 4px;
+}
