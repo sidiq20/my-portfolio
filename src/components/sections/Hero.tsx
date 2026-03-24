@@ -93,7 +93,7 @@ export function Hero() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-24 left-1/2 flex flex-col items-center gap-4"
+        className="absolute bottom-32 left-1/2 flex flex-col items-center gap-4"
         style={{ transform: "translateX(-50%)" }}
         initial={{ opacity: 0 }}
         animate={{ opacity: ready ? 0.35 : 0 }}

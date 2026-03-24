@@ -13,7 +13,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-32"
+      className="relative min-h-screen flex flex-col items-center justify-center px-6 py-32"
     >
       <div className="text-center max-w-4xl">
         <motion.p
