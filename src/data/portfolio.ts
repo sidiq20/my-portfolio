@@ -1,7 +1,7 @@
 export const personal = {
   firstName: "SIDIQ",
   lastName: "OLASODE",
-  role: "Full Stack Developer & AI Enthusiast",
+  role: "Full Stack Developer, AI Enthusiast & Web3 Developer",
   email: "sidiqolasode@gmail.com",
   github: "https://github.com/sidiq20",
   githubHandle: "sidiq20",
@@ -41,7 +41,7 @@ export const projects = [
     year: "2024",
     description:
       "A comprehensive property management ecosystem consisting of mobile applications, a robust backend, and a modern web frontend.",
-    tech: ["TypeScript", " FastAPI", "React Native", "MongoDB", "Redis"],
+    tech: ["TypeScript", "FastAPI", "React Native", "MongoDB", "Redis"],
     github: "#",
   },
   {

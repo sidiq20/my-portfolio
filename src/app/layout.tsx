@@ -63,8 +63,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://sidiqolasode.vercel.app",
-    siteName: "Olasode Sidiq",
-    title: "Olasode Sidiq — Full Stack Developer & AI Enthusiast",
+    siteName: "Sidiq Olasode",
+    title: "Sidiq Olasode — Full Stack Developer & AI Enthusiast",
     description:
       "Building digital products at the intersection of code and craft. Specializing in React, Next.js, AI/ML, and Web3.",
     images: [
@@ -72,13 +72,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Olasode Sidiq Portfolio",
+        alt: "Sidiq Olasode Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Olasode Sidiq — Full Stack Developer",
+    title: "Sidiq Olasode — Full Stack Developer",
     description:
       "Building digital products at the intersection of code and craft.",
     creator: "@sidiq20",
