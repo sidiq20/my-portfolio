@@ -38,6 +38,7 @@ export function Contact() {
         </motion.h2>
 
         <motion.div
+          className="flex flex-col items-center gap-6 mt-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -49,6 +50,16 @@ export function Contact() {
             data-cursor="expand"
           >
             {personal.email}
+          </a>
+
+          <a
+            href={personal.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-email"
+            data-cursor="expand"
+          >
+            WhatsApp
           </a>
         </motion.div>
 

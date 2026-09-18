@@ -93,8 +93,6 @@ export const metadata: Metadata = {
   },
 };
 
-import { Preloader } from "@/components/Preloader";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -103,7 +101,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${spaceMono.variable}`}>
       <body>
-        <Preloader />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
