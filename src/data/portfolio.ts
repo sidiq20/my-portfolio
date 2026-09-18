@@ -7,6 +7,7 @@ export const personal = {
   githubHandle: "sidiq20",
   twitter: "https://x.com/tobiscrazy",
   linkedin: "https://www.linkedin.com/in/olasode-sidiq-290a382a6/",
+  whatsapp: "https://wa.me/2348028861210",
 };
 
 export const projects = [
