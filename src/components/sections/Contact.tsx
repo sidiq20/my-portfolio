@@ -7,6 +7,7 @@ const socials = [
   { name: "GitHub", href: personal.github },
   { name: "Twitter", href: personal.twitter },
   { name: "LinkedIn", href: personal.linkedin },
+  { name: "WhatsApp", href: personal.whatsapp },
 ];
 
 export function Contact() {
